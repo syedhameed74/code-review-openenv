@@ -9,9 +9,13 @@ description = "An environment for automated code review"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
+    "openenv-core>=0.2.0",
     "openai",
     "pydantic",
     "fastapi",
     "uvicorn",
     "requests"
 ]
+
+[project.scripts]
+server = "server.app:app"
