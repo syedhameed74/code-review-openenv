@@ -1,0 +1,13 @@
+name: "CodeReviewEnv"
+version: "1.0.0"
+description: "An environment for automated code review, debugging, and refactoring."
+tasks:
+  - id: "easy-syntax"
+    difficulty: "easy"
+    description: "Identify and fix a simple syntax error in a Python function."
+  - id: "medium-refactor"
+    difficulty: "medium"
+    description: "Refactor a Java function to improve time complexity."
+  - id: "hard-security"
+    difficulty: "hard"
+    description: "Identify and patch an injection vulnerability in an API endpoint."
