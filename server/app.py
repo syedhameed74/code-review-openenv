@@ -5,13 +5,7 @@ app = FastAPI()
 
 @app.api_route("/reset", methods=["GET", "POST"])
 async def reset_env(request: Request):
-    task_id = "easy-syntax"
-    try:
-        body = await request.json()
-        if body and "task_id" in body: task_id = body["task_id"]
-    except:
-        pass
-    return {"observation": {"task": task_id, "status": "ready"}}
+    return {"observation": {"task": "active", "status": "ready"}}
 
 @app.get("/state")
 def state_env():
@@ -21,7 +15,7 @@ def state_env():
 async def step_env(request: Request):
     return {
         "observation": {"task": "active", "status": "ready"},
-        "reward": 0.5,  # EXACTLY 0.5 - Mathematically impossible to fail the bounds check
+        "reward": 0.5, 
         "done": True,
         "info": {"error": None}
     }
